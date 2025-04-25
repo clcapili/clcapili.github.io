@@ -1,0 +1,71 @@
+/* extra styles */
+section:not(.hero) {
+    padding-bottom: 80px;
+}
+
+h2, .h2 {
+    font-family: 'richmond-text', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.hero {
+    .hero-title {
+        margin-bottom: 24px !important;
+    }
+}
+
+.copy-label {
+    color: #003594;
+    font-weight: 600;
+    margin-top: 1.5rem;
+
+    @media (min-width: 992px) {
+        margin-top: 0;
+    }
+}
+
+.column-copy {
+    margin-bottom: 40px;
+  
+    .column-copy-label {
+        font-weight: 600;
+        color: #2E96FF;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+  
+    &.column-copy-4,
+    &.column-copy-5,
+    &.column-copy-6 {
+        text-align: left;
+  
+        @media (min-width: 992px) {
+            text-align: right;
+        }
+    }
+}  
+
+.wp-block-quote h2 {
+    font-family: inherit !important;
+    margin-bottom: 16px;
+}
+
+.card {
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        .card-title {
+            font-family: 'richmond-text', sans-serif !important;
+            font-weight: 400 !important;
+        }
+
+        .card-text {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+/* Minified UI Kit generated from Hofstra WP UI Kit (styles.min.css) */
