@@ -17,6 +17,7 @@ h2, .h2 {
 .copy-label {
     color: #003594;
     font-weight: 600;
+    letter-spacing: 0.09375rem;
     margin-top: 1.5rem;
 
     @media (min-width: 992px) {
