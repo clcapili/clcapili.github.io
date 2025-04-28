@@ -85,6 +85,7 @@ h2, .h2 {
 
         .carousel-slide-title {
             font-family: 'quiet-sans', sans-serif !important;
+            font-weight: 600;
         }
     }
 }
