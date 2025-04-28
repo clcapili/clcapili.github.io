@@ -38,6 +38,7 @@ h2, .h2 {
 
     .column-copy-title {
         font-family: 'quiet-sans', sans-serif !important;
+        font-weight: 600;
     }
   
     &.column-copy-4,
