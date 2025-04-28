@@ -35,6 +35,10 @@ h2, .h2 {
         text-transform: uppercase;
         margin-bottom: 8px;
     }
+
+    .column-copy-title {
+        font-family: 'quiet-sans', sans-serif !important;
+    }
   
     &.column-copy-4,
     &.column-copy-5,
@@ -77,6 +81,10 @@ h2, .h2 {
             @media (min-width: 992px) {
                 margin-bottom: 0;
             }
+        }
+
+        .carousel-slide-title {
+            font-family: 'quiet-sans', sans-serif !important;
         }
     }
 }
