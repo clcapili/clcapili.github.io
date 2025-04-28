@@ -54,6 +54,7 @@ h2, .h2 {
 
 .wp-block-quote h2 {
     font-family: inherit !important;
+    font-weight: 600 !important;
     margin-bottom: 16px;
 }
 
