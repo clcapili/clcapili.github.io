@@ -36,46 +36,55 @@
         <link href="css/uikit.min.css" rel="stylesheet" crossorigin="anonymous">
     </head>
     <body>
-        <header class="header header-dark show">
+        <header class="header header-dark show" role="banner">
+            <!-- Skip link for accessibility -->
             <div class="visually-hidden-focusable">
                 <div class="container">
                     <a class="skip-link" href="#main-content">Skip to main content</a>
                 </div>
             </div>
         
-            <!-- header desktop -->
-            <div class="header-desktop">
-                <!-- desktop nav -->
+            <!-- Header for desktop view -->
+            <nav class="header-desktop" aria-label="Main navigation">
                 <div class="header-desktop-nav">
                     <div class="container">
-                        <div class="row justify-content-between">
+                        <div class="row justify-content-between align-items-center">
                             <div class="col-3">
-                                <!-- site logo -->
-                                <a href="/" target="_self" class="navbar-brand site-logo">
-                                    <img src="/img/hofstra-logo-dark.svg" alt="Hofstra University logo in dark color scheme" class="img-fluid logo-default" />
+                                <!-- Site logo -->
+                                <a href="/" class="navbar-brand site-logo" aria-label="Hofstra University homepage">
+                                    <img 
+                                        src="/img/hofstra-logo-dark.svg" 
+                                        alt="Hofstra University logo in dark color scheme" 
+                                        class="img-fluid logo-default" 
+                                        loading="lazy"
+                                    />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </nav>
         
-            <!-- header mobile -->
-            <div class="header-mobile">
-                <!-- mobile nav -->
+            <!-- Header for mobile view -->
+            <nav class="header-mobile" aria-label="Mobile navigation">
                 <div class="header-mobile-nav">
                     <div class="container-fluid">
-                        <div class="row justify-content-between">
+                        <div class="row justify-content-between align-items-center">
                             <div class="col-auto">
-                                <!-- site logo -->
-                                <a href="/" target="_self" class="navbar-brand site-logo">
-                                    <img src="/img/hofstra-mobile-logo-dark.svg" alt="Hofstra University mobile logo" class="img-fluid logo-default" />
+                                <!-- Site logo for mobile -->
+                                <a href="/" class="navbar-brand site-logo" aria-label="Hofstra University homepage">
+                                    <img 
+                                        src="/img/hofstra-mobile-logo-dark.svg" 
+                                        alt="Hofstra University mobile logo" 
+                                        class="img-fluid logo-default" 
+                                        loading="lazy"
+                                    />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </nav>
         </header>
 
         <section class="hero-block hero hero-media">
@@ -95,113 +104,154 @@
             </div>
         </section>
 
-        <section id="the-new-brand" class="container pt-5 pt-lg-10">
+        <section id="the-new-brand" class="container pt-5 pt-lg-10" aria-labelledby="brand-heading-1">
             <div class="row">
                 <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                    <!-- Section introduction -->
                     <div class="copy-1">
-                        <h2 class="display-2">Building on a Legacy <br />of Distinction</h2>
-                        
-                        <p class="lead">As Hofstra University approaches its centennial in 2035, we are ready for the future. With a vision that leverages academic breadth and depth, and a dedicated community of researchers and scholars, we are innovating across academic programs and in the community to guide students toward any future they can imagine. Hofstra 100, the strategic plan, charts an ambitious course, and now, we unveil the new brand, which expresses who we are and who we aspire to become.</p>
-                    </div>
-
-                    <div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
-
-                    <a data-fancybox href="https://www.youtube.com/embed/WE9NUvuIGvA" class="modal-video-block btn-play btn-secondary">
-                        <img src="/img/modal-thumbnail.png" alt="Video thumbnail: Introducing Hofstra's new brand" class="img-fluid" />
-                    </a>
-
-                    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-
-                    <div class="copy-2">
-                        <h2 class="display-2">A Tradition of Innovation</h2>
-                        <p class="lead">Hofstra's new brand opens an exciting chapter that honors the traditions that shape us while boldly embracing the future we're building together. Our promise, mission, and new visual identity capture the essence of what makes Hofstra extraordinary. For the community, it creates a stronger sense of belonging. For prospective students and partners, it captures Hofstra's dynamic approach to education in a rapidly evolving world.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container pt-0">
-            <h2 class="display-2 text-center">A Symbol of Change</h2>
-
-            <div style="height:24px" aria-hidden="true" class="wp-block-spacer"></div>
-
-            <div class="row align-items-center justify-content-between">
-                <div class="col-md-6 col-lg-4 order-2 order-lg-1">
-                    <div class="column-copy column-copy-1">
-                        <p class="column-copy-label">Heraldic Shield</p>
-                        <h3 class="column-copy-title display-4">Tradition and Strength</h3>
-                        <p>Distinguished and enduring, supportive of our legacy and standards</p>
-                    </div>
-                    
-                    <div class="column-copy column-copy-2">
-                        <p class="column-copy-label">Monogram</p>
-                        <h3 class="column-copy-title display-4">Mark of Legacy</h3>
-                        <p>Bold and proud, embodying our name and our historic logos</p>
-                    </div>
-
-                    <div class="column-copy column-copy-3">
-                        <p class="column-copy-label">Tulip</p>
-                        <h3 class="column-copy-title display-4">Emblem of Renewal</h3>
-                        <p>Dutch heritage meets our continuous evolution and growth</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-auto order-1 order-lg-2">
-                    <div class="mb-5 mb-lg-0 text-center">
-                        <img src="/img/hofstra-logo-content.svg" alt="Collection of Hofstra brand symbols including shield, monogram, tulip, book, torch, and wings" class="img-fluid" />
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 order-3">
-                    <div class="column-copy column-copy-4">
-                        <p class="column-copy-label">Open Book</p>
-                        <h3 class="column-copy-title display-4">Repository of Wisdom</h3>
-                        <p>Intellectual curiosity and the constant pursuit of knowledge</p>
-                    </div>
-                    
-                    <div class="column-copy column-copy-5">
-                        <p class="column-copy-label">Torch</p>
-                        <h3 class="column-copy-title display-4">Guiding Beacon</h3>
-                        <p>Illuminating the path ahead and passing wisdom down through the generations</p>
-                    </div>
-
-                    <div class="column-copy column-copy-6">
-                        <p class="column-copy-label">Wings</p>
-                        <h3 class="column-copy-title display-4">Ambition and Potential</h3>
-                        <p>Aspiration, achievement, and our pursuit of new heights</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-copy-1">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <img src="/img/section-img-1.jpg" alt="Student walking on Hofstra campus during fall" class="img-fluid" />
+                        <h2 id="brand-heading-1" class="display-2">Building on a Legacy <br><span class="sr-only">of Distinction</span><span aria-hidden="true">of Distinction</span></h2>
+        
+                        <p class="lead">
+                            As Hofstra University approaches its centennial in 2035, we are ready for the future. With a vision that leverages academic breadth and depth, and a dedicated community of researchers and scholars, we are innovating across academic programs and in the community to guide students toward any future they can imagine. Hofstra 100, the strategic plan, charts an ambitious course, and now, we unveil the new brand, which expresses who we are and who we aspire to become.
+                        </p>
                     </div>
         
+                    <!-- Spacer with screen-reader skip -->
+                    <div class="wp-block-spacer" style="height:40px" aria-hidden="true"></div>
+        
+                    <!-- Accessible video link -->
+                    <div class="video-wrapper">
+                        <a 
+                            class="modal-video-block btn-play btn-secondary" 
+                            data-fancybox 
+                            href="https://www.youtube.com/embed/WE9NUvuIGvA" 
+                            aria-label="Play video: Introducing Hofstra's new brand"
+                        >
+                            <img 
+                                src="/img/modal-thumbnail.png" 
+                                alt="Video thumbnail: Introducing Hofstra's new brand" 
+                                class="img-fluid"
+                                loading="lazy"
+                            />
+                        </a>
+                    </div>
+        
+                    <!-- Spacer with screen-reader skip -->
+                    <div class="wp-block-spacer" style="height:60px" aria-hidden="true"></div>
+        
+                    <!-- Second section of content -->
+                    <div class="copy-2">
+                        <h2 class="display-2">A Tradition of Innovation</h2>
+                        <p class="lead">
+                            Hofstra's new brand opens an exciting chapter that honors the traditions that shape us while boldly embracing the future we're building together. Our promise, mission, and new visual identity capture the essence of what makes Hofstra extraordinary. For the community, it creates a stronger sense of belonging. For prospective students and partners, it captures Hofstra's dynamic approach to education in a rapidly evolving world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container pt-0" aria-labelledby="symbol-change-heading">
+            <h2 id="symbol-change-heading" class="display-2 text-center">A Symbol of Change</h2>
+        
+            <div class="wp-block-spacer" style="height:24px" aria-hidden="true"></div>
+        
+            <div class="row align-items-center justify-content-between">
+                <!-- Left Column -->
+                <div class="col-md-6 col-lg-4 order-2 order-lg-1">
+                    <article class="column-copy column-copy-1" aria-labelledby="shield-title">
+                        <p class="column-copy-label">Heraldic Shield</p>
+                        <h3 id="shield-title" class="column-copy-title display-4">Tradition and Strength</h3>
+                        <p>Distinguished and enduring, supportive of our legacy and standards.</p>
+                    </article>
+        
+                    <article class="column-copy column-copy-2" aria-labelledby="monogram-title">
+                        <p class="column-copy-label">Monogram</p>
+                        <h3 id="monogram-title" class="column-copy-title display-4">Mark of Legacy</h3>
+                        <p>Bold and proud, embodying our name and our historic logos.</p>
+                    </article>
+        
+                    <article class="column-copy column-copy-3" aria-labelledby="tulip-title">
+                        <p class="column-copy-label">Tulip</p>
+                        <h3 id="tulip-title" class="column-copy-title display-4">Emblem of Renewal</h3>
+                        <p>Dutch heritage meets our continuous evolution and growth.</p>
+                    </article>
+                </div>
+        
+                <!-- Center Image -->
+                <div class="col-lg-auto order-1 order-lg-2 text-center">
+                    <img 
+                        src="/img/hofstra-logo-content.svg" 
+                        alt="Visual collection of Hofstra symbols: shield, monogram, tulip, book, torch, and wings" 
+                        class="img-fluid"
+                        loading="lazy"
+                    />
+                </div>
+        
+                <!-- Right Column -->
+                <div class="col-md-6 col-lg-4 order-3">
+                    <article class="column-copy column-copy-4" aria-labelledby="book-title">
+                        <p class="column-copy-label">Open Book</p>
+                        <h3 id="book-title" class="column-copy-title display-4">Repository of Wisdom</h3>
+                        <p>Intellectual curiosity and the constant pursuit of knowledge.</p>
+                    </article>
+        
+                    <article class="column-copy column-copy-5" aria-labelledby="torch-title">
+                        <p class="column-copy-label">Torch</p>
+                        <h3 id="torch-title" class="column-copy-title display-4">Guiding Beacon</h3>
+                        <p>Illuminating the path ahead and passing wisdom down through the generations.</p>
+                    </article>
+        
+                    <article class="column-copy column-copy-6" aria-labelledby="wings-title">
+                        <p class="column-copy-label">Wings</p>
+                        <h3 id="wings-title" class="column-copy-title display-4">Ambition and Potential</h3>
+                        <p>Aspiration, achievement, and our pursuit of new heights.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-copy-1" aria-labelledby="momentum-heading">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left Column with Image -->
+                    <div class="col-lg-5">
+                        <img 
+                            src="/img/section-img-1.jpg" 
+                            alt="Student walking on Hofstra campus during fall" 
+                            class="img-fluid"
+                            loading="lazy"
+                        />
+                    </div>
+        
+                    <!-- Right Column with Text Content -->
                     <div class="col-lg-6 offset-lg-1">
-                        <p class="copy-label">OUR PROMISE:  WHO WE ARE</p>
-                        <h2 class="display-2">Momentum</h2>
+                        <p class="copy-label">OUR PROMISE: WHO WE ARE</p>
+                        <h2 id="momentum-heading" class="display-2">Momentum</h2>
                         <p class="lead">Our journeys meet here: yours and Hofstra's, united in success.</p>
                         <p class="lead">By connecting academic exploration with experiential learning and bridging the disciplines, we set ideas in motion and create endless opportunities for you to make your mark. Here, you experience Hofstra's legacy of distinction in teaching and scholarship on a campus at the nexus of urban, suburban, and coastal environments.</p>
                         <p class="lead">We engage with the broader community to foster meaningful relationships and progress. Together, we spark change and ignite momentum into the future.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>        
 
-        <section class="section-copy-2">
+        <section class="section-copy-2" aria-labelledby="preparing-students-heading">
             <div class="container">
                 <div class="row flex-lg-row-reverse align-items-center">
+                    <!-- Left Column with Image -->
                     <div class="col-lg-5 offset-lg-1">
-                        <img src="/img/section-img-2.jpg" alt="Students interacting on Hofstra campus" class="img-fluid" />
+                        <img 
+                            src="/img/section-img-2.jpg" 
+                            alt="Students interacting on Hofstra campus" 
+                            class="img-fluid"
+                            loading="lazy"
+                        />
                     </div>
         
+                    <!-- Right Column with Text Content -->
                     <div class="col-lg-6">
                         <p class="copy-label">OUR MISSION: WHY WE EXIST</p>
-                        <h2 class="display-2">Preparing Students to Thrive</h2>
+                        <h2 id="preparing-students-heading" class="display-2">Preparing Students to Thrive</h2>
                         <p class="lead">Situated at the nexus of urban, suburban, and coastal communities, Hofstra University prepares students to thrive in the complexity of life and work in our global society by:</p>
                         <ul class="lead">
                             <li>Cultivating an inclusive, diverse, learning-centered scholarly community, where free inquiry can flourish.</li>
@@ -212,7 +262,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>        
 
         <section class="carousel-wrapper">
             <div class="container">
@@ -385,15 +435,16 @@
             </div>
         </section>
         
-        <section class="container">
+        <section class="container" aria-labelledby="seize-the-moment-heading">
             <div class="row">
                 <div class="col-lg-8">
-                    <h2 class="display-2">Seize the Moment</h2>
+                    <h2 id="seize-the-moment-heading" class="display-2">Seize the Moment</h2>
                     <p class="lead">As we roll out the new brand, the Hofstra community plays a vital role in bringing it to life.</p>
                 </div>
             </div>
-            
+        
             <div class="row">
+                <!-- For Students and Alumni -->
                 <div class="col-lg-6">
                     <div class="card card-border-bottom h-100">
                         <div class="card-body">
@@ -402,14 +453,15 @@
                                 <p class="card-text">Champion the brand to our newest community members: embody our promise and values, and work with us to advance our mission. You can also show your pride with Hofstra's brand new merchandise!</p>
                             </div>
                             
-                            <a href="https://hofstra.spirit.bncollege.com/" target="_blank" class="link-arrow link-arrow-primary">
-                                <i class="icon icon-arrow_forward"></i>
+                            <a href="https://hofstra.spirit.bncollege.com/" target="_blank" class="link-arrow link-arrow-primary" aria-label="Explore the Hofstra merchandise collection">
+                                <i class="icon icon-arrow_forward" aria-hidden="true"></i>
                                 <span>Explore the Collection</span>
                             </a>
                         </div>
                     </div>
                 </div>
-
+        
+                <!-- For Press and Partners -->
                 <div class="col-lg-6">
                     <div class="card card-border-bottom h-100">
                         <div class="card-body">
@@ -418,82 +470,90 @@
                                 <p class="card-text">Contact a Hofstra representative for more information on our new brand and identity.</p>
                             </div>
                             
-                            <a href="mailto:marcom@hofstra.edu?subject=New%20Brand%20Inquiry" target="_self" class="link-arrow link-arrow-primary">
-                                <i class="icon icon-arrow_forward"></i>
+                            <a href="mailto:marcom@hofstra.edu?subject=New%20Brand%20Inquiry" target="_self" class="link-arrow link-arrow-primary" aria-label="Contact Hofstra for new brand inquiries">
+                                <i class="icon icon-arrow_forward" aria-hidden="true"></i>
                                 <span>Contact Us</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>        
 
-        <footer>
-            <!-- columns -->
+        <footer role="contentinfo">
             <div class="container">
                 <div class="footer-section">
                     <div class="row">
                         <div class="col-auto col-lg-4">
-                            <a href="/" target="_self" class="site-logo">
-                                <img src="/img/hofstra-logo-footer.svg" alt="Hofstra University logo in footer with color version" class="img-fluid logo-color" />
+                            <!-- Footer logo with ARIA label -->
+                            <a href="/" class="site-logo" aria-label="Hofstra University homepage">
+                                <img 
+                                    src="/img/hofstra-logo-footer.svg" 
+                                    alt="Hofstra University full-color footer logo" 
+                                    class="img-fluid logo-color" 
+                                    loading="lazy" 
+                                />
                             </a>
         
-                            <!-- connect -->
-                            <div class="connect">
+                            <!-- Contact information -->
+                            <address class="connect" aria-label="University contact address">
                                 <p>
                                     Hempstead, N.Y. 11549-1000<br>
-                                    (516) 463-6600
+                                    <a href="tel:+15164636600">(516) 463-6600</a>
                                 </p>
-                            </div>
+                            </address>
         
-                            <!-- social -->
-                            <ul class="list-inline social">
-                                <li class="list-inline-item">
-                                    <a class="social-link" href="https://x.com/hofstrau" target="_blank">
-                                        <i class="icon icon-X" aria-hidden="true"></i>
-                                        <span class="visually-hidden">X</span>
-                                    </a>
-                                </li>
-                            
-                                <li class="list-inline-item">
-                                    <a class="social-link" href="https://www.facebook.com/hofstrau" target="_blank">
-                                        <i class="icon icon-Facebook" aria-hidden="true"></i>
-                                        <span class="visually-hidden">Facebook</span>
-                                    </a>
-                                </li>
+                            <!-- Social media links -->
+                            <nav aria-label="Social media">
+                                <ul class="list-inline social">
+                                    <li class="list-inline-item">
+                                        <a class="social-link" href="https://x.com/hofstrau" target="_blank" rel="noopener" aria-label="Follow Hofstra on X (formerly Twitter)">
+                                            <i class="icon icon-X" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="social-link" href="https://www.facebook.com/hofstrau" target="_blank" rel="noopener" aria-label="Follow Hofstra on Facebook">
+                                            <i class="icon icon-Facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="social-link" href="https://www.instagram.com/hofstrau/?hl=en" target="_blank" rel="noopener" aria-label="Follow Hofstra on Instagram">
+                                            <i class="icon icon-Instagram" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="social-link" href="https://www.youtube.com/hofstrauniversity" target="_blank" rel="noopener" aria-label="Follow Hofstra on YouTube">
+                                            <i class="icon icon-YouTube" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a class="social-link" href="https://www.flickr.com/photos/hofstrauniversity/" target="_blank" rel="noopener" aria-label="Follow Hofstra on Flickr">
+                                            <i class="icon icon-Flickr" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
         
-                                <li class="list-inline-item">
-                                    <a class="social-link" href="https://www.instagram.com/hofstrau/?hl=en" target="_blank">
-                                        <i class="icon icon-Instagram" aria-hidden="true"></i>
-                                        <span class="visually-hidden">Instagram</span>
-                                    </a>
-                                </li>
-        
-                                <li class="list-inline-item">
-                                    <a class="social-link" href="https://www.youtube.com/hofstrauniversity" target="_blank">
-                                        <i class="icon icon-YouTube" aria-hidden="true"></i>
-                                        <span class="visually-hidden">YouTube</span>
-                                    </a>
-                                </li>
-        
-                                <li class="list-inline-item">
-                                    <a class="social-link" href="https://www.flickr.com/photos/hofstrauniversity/" target="_blank">
-                                        <i class="icon icon-Flickr" aria-hidden="true"></i>
-                                        <span class="visually-hidden">Flickr</span>
-                                    </a>
-                                </li>
-                            </ul>
-        
-                            <p class="footer-description">Hofstra University is an EO/AA/ADA educator and employer and does not discriminate on the basis of race, color, national and ethnic origin, or religion, sex, sexual orientation, gender identity or expression, age, physical or mental disability, marital or veteran status in administration of its educational policies, admissions policies, scholarship and loan programs, and athletic and other school-administered programs. Hofstra University admits students of any race, color, national, and ethnic origin to all the rights, privileges, programs and activities generally accorded or made available to its students.</p>
+                            <!-- Description -->
+                            <p class="footer-description">
+                                Hofstra University is an EO/AA/ADA educator and employer and does not discriminate on the basis of race, color, national and ethnic origin, or religion, sex, sexual orientation, gender identity or expression, age, physical or mental disability, marital or veteran status in administration of its educational policies, admissions policies, scholarship and loan programs, and athletic and other school-administered programs. Hofstra University admits students of any race, color, national, and ethnic origin to all the rights, privileges, programs and activities generally accorded or made available to its students.
+                            </p>
                         </div>
                     </div>
                 </div>
-                
+        
+                <!-- Legal links -->
                 <ul class="list-inline copyright">
                     <li class="list-inline-item">&copy; Hofstra University. All Rights Reserved.</li>
-                    <li class="list-inline-item"><a href="https://www.hofstra.edu/about/policies.html" target="_blank" class="underline-hover underline-hover-secondary">Hofstra University Policies</a></li>
-                    <li class="list-inline-item"><a href="https://www.hofstra.edu/policy/privacy.html" target="_blank" class="underline-hover underline-hover-secondary">Privacy</a></li>
-                    <li class="list-inline-item"><a href="https://www.hofstra.edu/policy/gdpr.html" target="_blank" class="underline-hover underline-hover-secondary">GDPR</a></li>
+                    <li class="list-inline-item">
+                        <a href="https://www.hofstra.edu/about/policies.html" target="_blank" rel="noopener" class="underline-hover underline-hover-secondary">Hofstra University Policies</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.hofstra.edu/policy/privacy.html" target="_blank" rel="noopener" class="underline-hover underline-hover-secondary">Privacy</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.hofstra.edu/policy/gdpr.html" target="_blank" rel="noopener" class="underline-hover underline-hover-secondary">GDPR</a>
+                    </li>
                 </ul>
             </div>
         </footer>
