@@ -9,7 +9,7 @@
     "css-prefix": "postcss css/uikit.css --use=autoprefixer --map=false  --output=css/uikit.css",
     "css-compress": "sass css/uikit.css css/uikit.min.css --style compressed",
     "js": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack ",
-    "js-lib": "concat -o js/libs.js src/js/libs/jquery-3.6.0.min.js src/js/libs/bootstrap.bundle.min.js src/js/libs/slick.min.js src/js/libs/jquery.fancybox.min.js",
+    "js-lib": "concat -o js/libs.js src/js/libs/jquery-3.6.0.min.js src/js/libs/doubledash.js src/js/libs/bootstrap.bundle.min.js src/js/libs/slick.min.js src/js/libs/jquery.fancybox.min.js",
     "build": "npm-run-all css js js-lib",
     "watch": "watch 'npm run build' src"
   },
