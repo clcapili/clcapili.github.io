@@ -1,0 +1,230 @@
+// global
+.accordion-header {
+    font-family: 'richmond-text', sans-serif;
+    font-weight: 400;
+}
+
+// accordion
+.accordion-block {
+    .accordion-collapse {
+        .accordion-body {
+            p:last-child { margin-bottom: 0; }
+        }
+    }
+    
+    .accordion-button {
+        font-size: unset;
+        column-gap: 20px;
+        padding: 1rem;
+    
+        &:not(.collapsed) {
+            box-shadow: none;
+        }
+    
+        &:after {
+            background-color: $primary;
+            background-size: 1rem;
+            background-position: center;
+            padding: 25px;
+            border-radius: 50px;
+        }
+        
+        &:hover {
+            background-color: $gray-200;
+            color: #4068AF;
+            text-decoration: none;
+    
+            &:after {
+                background-color: #4068AF;
+            }
+        }
+    }
+}
+
+// accordion small
+.accordion-small-block {
+    .accordion-collapse {
+        .accordion-body {
+            padding: 16px;
+            margin-left: 58px;
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .accordion-button {
+        font-size: unset;
+        column-gap: 10px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+
+        &:after {
+            order: -1;
+            margin-right: 12px;
+            margin-left: 0;
+            background-color: $primary;
+            background-size: 1rem;
+            background-position: center;
+            padding: 18px;
+            border-radius: 50px;
+        }
+
+        &:not(.collapsed) {
+            box-shadow: none;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: #4068AF;
+            text-decoration: none;
+
+            &:after {
+                background-color: #4068AF;
+            }
+        }
+    }
+}
+
+// accordion mobile only
+.accordion-mobile-only-block {
+    position: relative;
+
+    .desktop-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-clip: padding-box !important; 
+        display: none;
+        z-index: 1;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    .mobile-image {
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .accordion-wrapper {
+        background-color: $primary;
+        color: $white;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        padding: 32px 0;
+
+        @media (min-width: 768px) {
+            background-color: transparent;
+            padding: 70px 0 100px;
+        }
+
+        .accordion-heading {
+            color: $white;
+        }
+
+        // accordion
+        .accordion {
+            margin-bottom: 40px;
+
+            .accordion-item {
+                color: $white;
+
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+
+                .accordion-header {
+                    .accordion-button {
+                        display: flex;
+                        align-items: center;
+                        padding: 0;
+                        color: $white;
+        
+                        &:not(.collapsed) {
+                            background-color: transparent;
+                        }
+                    
+                        .accordion-number {
+                            background: $secondary;
+                            color: $primary;
+                            font-size: 2.5rem;
+                            font-weight: bold;
+                            
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 2rem;
+                            height: 2rem;
+                            padding: 26px;
+                            order: -1;
+                            flex-shrink: 0;
+                            margin-right: 26px;
+                        }
+                    
+                        .accordion-title {
+                            flex: 1;
+                            font-family: 'richmond-text', sans-serif;
+                            font-weight: 400;
+                            color: $white;
+                            text-align: left;
+                            margin-bottom: 0;
+                        }
+                    
+                        &::after {
+                            display: none;
+                        }
+                    
+                        &.collapsed + .accordion-collapse {
+                            display: none;
+                        }
+                    }
+                }
+    
+                
+              
+                .accordion-collapse {
+                    &.show {
+                        display: block;
+                    }
+                    
+                    .accordion-body {
+                        padding: 0;
+                        padding-left: 80px;
+
+                        p:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+              
+                @media (min-width: 768px) {
+                    .accordion-button {
+                        pointer-events: none;
+                        background-color: transparent;
+                        box-shadow: none;
+                
+                        &::after {
+                            display: none;
+                        }
+                    }
+    
+                    .accordion-collapse {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+}  

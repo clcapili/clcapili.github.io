@@ -1,0 +1,177 @@
+// nav anchor
+.nav-anchor-block {
+    .nav-anchor-bar { 
+        background-color: $primary;
+        color: $white;
+        padding: 20px 0;
+
+        .nav-anchor-desktop {
+            display: none;
+            text-align: center;
+
+            @media (min-width: 992px) {
+                display: block;
+            }
+
+            ul {
+                display: inline-flex;
+                column-gap: 40px;
+
+                .nav-link {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        .nav-anchor-mobile { 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media (min-width: 992px) {
+                display: none;
+            }
+
+            .nav-anchor-toggle {
+                font-size: 1.25rem;
+                color: $white;
+            }
+
+            ul.nav-anchor-mobile-menu {
+                font-size: 1.25rem;
+                text-align: center;
+
+                margin-bottom: 0;
+                margin-top: 0;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: 
+                    max-height 0.4s ease,
+                    opacity 0.4s ease,
+                    visibility 0.4s ease,
+                    margin-top 0.4s ease;
+
+                &.is-open {
+                    margin-top: 24px;
+                    max-height: 500px;
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                }
+
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// nav sidebar
+.nav-sidebar {
+    .nav-sidebar-desktop {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+
+        .page-title {
+            color: $blue-mid;
+            padding: 16px 12px;
+            margin-bottom: 0;
+            border-bottom: 1px solid $gray-400;
+        }
+
+        .nav-pills {
+            flex-direction: column;
+            padding-left: 0;
+            list-style: none;
+    
+            .nav-link {
+                background-color: $white;
+                border-color: $white;
+                border-left: 4px solid $white;
+                width: 100%;
+                padding: 16px 16px 16px 8px;
+                font-size: 1.25rem;
+                text-align: left;
+                transition: padding-left 0.3s ease;
+    
+                &:hover {
+                    background-color: $gray-200;
+                    color: $primary;
+                    border-left: 4px solid $blue-light;
+                    padding-left: 16px;
+                }
+            }
+        }
+    }
+    
+    .nav-sidebar-mobile {
+        flex-direction: column;
+        align-items: flex-start;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+
+        .nav-sidebar-toggle {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $blue-mid;
+            padding: 16px 12px;
+            margin-bottom: 0;
+            border-bottom: 1px solid $gray-400;
+        }
+
+        ul.nav-sidebar-mobile-menu {
+            font-size: 1.25rem;
+            text-align: center;
+
+            margin-bottom: 0;
+            margin-top: 0;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: 
+                max-height 0.4s ease,
+                opacity 0.4s ease,
+                visibility 0.4s ease,
+                margin-top 0.4s ease;
+
+            &.is-open {
+                max-height: 500px;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            li {
+                padding: 16px 12px;
+
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

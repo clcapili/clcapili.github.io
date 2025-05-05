@@ -1,0 +1,26 @@
+// header
+.header {
+    position: absolute;
+    top: -190px;
+    width: 100%;
+    z-index: $zindex-fixed;
+    transition: top .5s;
+    
+    &.show {
+        top: 0;
+    }
+    
+    @import "header/logo.scss";
+    
+    @import "header/desktop.scss";
+    
+    @import "header/mobile.scss";
+}
+
+// header desktop overflow
+body.desktop-menu-open,
+html.desktop-menu-open { overflow: hidden; }
+
+// header mobile overflow
+body.mobile-menu-open,
+html.mobile-menu-open { overflow: hidden; }

@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'icon';
+  src:  url('../fonts/icons.eot?rc1g2r');
+  src:  url('../fonts/icons.eot?rc1g2r#iefix') format('embedded-opentype'),
+    url('../fonts/icons.ttf?rc1g2r') format('truetype'),
+    url('../fonts/icons.woff?rc1g2r') format('woff'),
+    url('../fonts/icons.svg?rc1g2r#hofstra') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e900";
+}
+.icon-account_balance:before {
+  content: "\e901";
+}
+.icon-arrow_back:before {
+  content: "\e902";
+}
+.icon-arrow_forward:before {
+  content: "\e903";
+}
+.icon-article:before {
+  content: "\e904";
+}
+.icon-close:before {
+  content: "\e905";
+}
+.icon-code:before {
+  content: "\e906";
+}
+.icon-edit:before {
+  content: "\e907";
+}
+.icon-Facebook:before {
+  content: "\e908";
+}
+.icon-Flickr:before {
+  content: "\e909";
+}
+.icon-groups:before {
+  content: "\e90a";
+}
+.icon-Instagram:before {
+  content: "\e90b";
+}
+.icon-keyboard_back:before {
+  content: "\e90c";
+}
+.icon-keyboard_down:before {
+  content: "\e90d";
+}
+.icon-keyboard_forward:before {
+  content: "\e90e";
+}
+.icon-keyboard_up:before {
+  content: "\e90f";
+}
+.icon-language:before {
+  content: "\e910";
+}
+.icon-lock:before {
+  content: "\e911";
+}
+.icon-menu:before {
+  content: "\e912";
+}
+.icon-newsmode:before {
+  content: "\e913";
+}
+.icon-play_arrow:before {
+  content: "\e914";
+}
+.icon-play_circle:before {
+  content: "\e915";
+}
+.icon-refresh:before {
+  content: "\e916";
+}
+.icon-remove:before {
+  content: "\e917";
+}
+.icon-responsive-layout:before {
+  content: "\e918";
+}
+.icon-school:before {
+  content: "\e919";
+}
+.icon-search:before {
+  content: "\e91a";
+}
+.icon-warning:before {
+  content: "\e91b";
+}
+.icon-X:before {
+  content: "\e91c";
+}
+.icon-YouTube:before {
+  content: "\e91d";
+}

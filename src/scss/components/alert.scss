@@ -1,0 +1,45 @@
+// Generate contextual modifier classes for colorizing the alert
+@each $key, $value in $theme-colors {
+    .alert-#{$key} {
+      --#{$prefix}alert-color: #{color-contrast($value)};
+      --#{$prefix}alert-bg: #{$value};
+      --#{$prefix}alert-link-color: #{$value};
+
+        a {
+            color: color-contrast($value);
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.alert {
+    a {
+        font-weight: $font-weight-semibold;
+    }
+}
+
+.alert-dismissible {
+
+    .btn-close {
+        display: flex;
+        width: 40px;
+        height: 100%;
+        padding: 0;
+        box-sizing: border-box;
+
+        filter: invert(1);
+        opacity: 1;
+    }
+
+    @media (max-width: 992px) {
+        text-align: left;
+
+        .btn-close {
+            background-position: top 1rem right .75rem;
+        }
+    }
+
+}

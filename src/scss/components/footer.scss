@@ -1,0 +1,96 @@
+footer {
+    background-color: $blue;
+    color: $white;
+    padding: 65px 0;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    .site-logo {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    ul.social {
+        li {
+            .social-link {
+                font-size: 1.5rem;
+                padding: 0 8px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+    
+                .icon {
+                    transition: color 0.3s ease;
+                }
+    
+                &:hover {
+                    background-color: $secondary;
+    
+                    .icon {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }    
+
+    .footer-section {
+        margin-bottom: 60px;
+
+        .connect {
+            p:first-child {
+                font-size: 0.875rem;
+            }
+
+            a {
+                &.underline-hover {
+                    position: relative;
+                    text-decoration: none;
+            
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -3px;
+                        width: 0;
+                        height: 1px;
+                        background: $secondary;
+                        transition: width 0.3s ease;
+                    }
+                
+                    &:hover {
+                        color: $secondary;
+            
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-description {
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            
+            @media (min-width: 768px) {
+                margin-bottom: 0;
+            }
+        }
+
+        .footer-columns {
+            margin-bottom: 0;
+
+            li:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .copyright {
+        padding-top: 32px;
+        margin-bottom: 0;
+        border-top: 1px solid rgba($white, 0.25);
+    }
+}

@@ -1,0 +1,20 @@
+.modal {
+    .modal-header {
+        .modal-title {
+            color: $primary;
+        }
+
+        .btn-close {
+            opacity: 1;
+        }
+    }
+
+    .modal-footer {
+        justify-content: flex-start;
+        padding: 1.5rem 1rem;
+
+        > * {
+            margin: 0;
+        }
+    }
+}

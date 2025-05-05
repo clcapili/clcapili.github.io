@@ -1,0 +1,57 @@
+// headings
+h1, .h1 { line-height: $h1-line-height; }
+h2, .h2 { line-height: $h2-line-height; }
+h3, .h3 { line-height: $h3-line-height; }
+h4, .h4 { line-height: $h4-line-height; }
+h5, .h5 { line-height: $h5-line-height; }
+h6, .h6 { line-height: $h6-line-height; }
+
+// display
+// @each $size, $value in $display-line-heights {
+//     .display-#{$size} {
+//         line-height: $value;
+//     }
+// }
+
+.lead {
+    line-height: 1.75rem;
+}
+
+// link hover
+a {
+    display: inline-block;
+    
+    &.underline-hover {
+        position: relative;
+        text-decoration: none;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background: #4068AF;
+            transition: width 0.3s ease;
+        }
+    
+        &:hover {
+            color: #4068AF;
+
+            &:after {
+                width: 100%;
+            }
+        }
+
+        &.underline-hover-secondary {
+            &:after {
+                background: $secondary;
+            }
+        
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+}

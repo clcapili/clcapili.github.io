@@ -1,0 +1,100 @@
+.carousel {
+    &.slide {
+        &.flexed-slider {
+            overflow: hidden;
+
+            .carousel-inner {
+                display: flex !important;
+                flex-wrap: nowrap;
+                gap: 2rem;
+                overflow: initial;
+                transition: transform 0.4s ease;
+            }
+
+            .carousel-item {
+                display: block !important;
+                float: none !important;
+                margin: 0;
+                transition: none !important;
+                transform: none !important;
+                position: static !important; 
+            }
+
+            .carousel-item-next,
+            .carousel-item-prev,
+            .carousel-item-start,
+            .carousel-item-end {
+                transform: none !important;
+                transition: none !important;
+                left: auto !important; 
+            }
+        }
+    }
+}
+
+.carousel-block {
+    .carousel-controls-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .carousel-controls {
+            display: flex;
+            background-color: $primary;
+            border-radius: 50px;
+            padding: 4px;
+            margin-right: 26px;
+        }
+    }
+
+    [class^="carousel-control-"] {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+
+        span[class^="carousel-control-"] {
+            font-size: 1.5rem;
+            color: $white;
+            background-image: none;
+            background-color: transparent;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        &:hover,
+        &:focus {
+            span[class^="carousel-control-"] {
+                background-color: $blue-mid;
+            }
+        }
+    }
+
+    .carousel-indicators {
+        height: 64px;
+        bottom: calc(-64px - 1rem);
+        margin: 0;
+        justify-content: flex-end;
+        margin-left: calc(160px + 1rem);
+        display: flex;
+        align-items: center;
+
+        [data-bs-target] {
+            background-color: $primary;
+            height: 10px;
+            border-radius: 3px;
+            background-clip: unset;
+            box-sizing: border-box;
+            border: 0;
+        }
+    }
+
+    .progress {
+        width: 100%;
+        margin-top: 0 !important;
+    }
+      
+}

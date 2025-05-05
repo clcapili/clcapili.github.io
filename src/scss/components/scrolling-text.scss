@@ -1,0 +1,12 @@
+.scrolling-text-mask {
+    height: 1em;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 0%, black 100%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 0%, black 100%, transparent 100%);
+}
+
+.scrolling-text {
+    transition: transform .6s ease-in-out; /* smooth transition */
+}

@@ -1,0 +1,304 @@
+// grays
+$white:    #fff;
+$gray-100: #F8F9FA;
+$gray-200: #E9ECEF;
+$gray-300: #DEE2E6;
+$gray-400: #CED4DA;
+$gray-500: #ADB5BD;
+$gray-600: #6C757D;
+$gray-700: #495057;
+$gray-800: #343A40;
+$gray-900: #212529;
+$black:    #000000;
+
+$grays: (
+  "white": $white,
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+  "black": $black
+);
+
+// colors
+$gold:        #FFC72C;
+$blue:        #003594;
+$blue-mid:    #2E96FF;
+$blue-light:  #84C8FF;
+$navy-dark:   #001254;
+
+$colors: (
+  "gold":       $gold,
+  "blue":       $blue,
+  "blue-mid":   $blue-mid,
+  "blue-light": $blue-light,
+  "navy-dark":  $navy-dark
+);
+
+$wp-colors:(
+  "white":      $white,
+  "gray-900":   $gray-900,
+  "black":      $black,
+  "gold":       $gold,
+  "blue":       $blue,
+  "blue-mid":   $blue-mid,
+  "blue-light": $blue-light,
+  "navy-dark":  $navy-dark
+);
+
+$min-contrast-ratio:   3;
+
+// theme
+$primary:       $blue;
+$secondary:     $gold;
+$light:         $white;
+$dark:          $navy-dark;
+
+$custom-colors:(
+    "primary":    $blue,
+    "secondary":  $gold,
+    "light":      $white,
+    "dark":       $navy-dark
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors: map-remove($theme-colors, "warning", "success", "danger", "info" );
+
+// body
+$body-color:  $gray-900;
+$body-bg:     $white;
+
+// spacing
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+  8: $spacer * 3.5,
+  9: $spacer * 4,
+  10: $spacer * 4.5,
+  11: $spacer * 5,
+  12: $spacer * 5.5,
+  13: $spacer * 6,
+  14: $spacer * 6.5,
+  15: $spacer * 7
+);
+
+// links
+$link-color:                  $primary;
+$link-decoration:             underline;
+$link-shade-percentage:       100%;
+$link-hover-color:            $navy-dark;
+
+// typography
+// font
+$font-size-base:              1rem;
+$font-family-sans-serif:      "quiet-sans", sans-serif;
+$font-weight-semibold:        600;
+$line-height-base:            1.75;
+
+// headings
+$h1-font-size:                2.5rem;
+$h2-font-size:                2rem;
+$h3-font-size:                1.5rem;
+$h4-font-size:                1.25rem;
+$h5-font-size:                1.125rem;
+$h6-font-size:                1rem;
+
+$h1-line-height:              2.75rem;
+$h2-line-height:              2.5rem;
+$h3-line-height:              2rem;
+$h4-line-height:              1.75rem;
+$h5-line-height:              1.5rem;
+$h6-line-height:              1.5rem;
+
+$headings-font-family:        "quiet-sans", sans-serif;
+$headings-font-weight:        600;
+$headings-color:              $primary;
+
+// display
+$display-font-sizes: (
+  1: 4rem,
+  2: 3.375rem,
+  3: 2.5rem,
+  4: 1.75rem,
+  5: 1.5rem,
+  6: 1.25rem
+);
+
+$display-line-heights: (
+  1: 4.5rem,
+  2: 3.75rem,
+  3: 3rem,
+  4: 2.25rem,
+  5: 2.25rem,
+  6: 2.25rem
+);
+
+$display-font-family:        "richmond-text", sans-serif;
+$display-font-weight:         400;
+
+$table-color: $body-color;
+
+// type
+$lead-font-size:              1.25rem;
+$lead-font-weight:            400;
+
+$small-font-size:             0.875rem;
+
+// Components
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  6: 6px
+);
+
+$border-color:                $gray-400;
+
+// buttons
+$input-btn-font-size:         1rem;
+
+$btn-color:                   $blue;
+$btn-padding-y:               16px;
+$btn-padding-x:               24px;
+$btn-font-family:             "quiet-sans", sans-serif;
+$btn-font-size:               $input-btn-font-size;
+$btn-font-weight:             400;
+
+$btn-border-radius:           50px;
+$btn-link-color:              $secondary;
+
+$btn-border-width:            1px;
+
+$btn-disabled-opacity:        1;
+
+// forms
+$input-padding-y:             .75rem;
+$input-padding-x:             .625rem;
+$input-font-size:             $input-btn-font-size;
+
+$input-bg:                    $white;
+$input-color:                 $gray-900;
+
+$input-border-color:          $border-color;
+$input-border-width:          1px;
+$input-border-radius:         0;
+
+$input-focus-bg:              $white;
+$input-focus-color:           $input-color;
+$input-focus-border-color:    $border-color;
+$input-focus-box-shadow:      0 0 0 0.188rem #84C8FF;
+
+$input-placeholder-color:     $gray-600;
+
+$form-check-input-checked-color:          $input-color;
+$form-check-input-checked-bg-color:       $white;
+$form-check-input-checked-border-color:   $border-color;
+$form-check-margin-bottom:                20px;
+$form-check-input-bg:                     $white;
+$form-check-input-border:                 1px solid $border-color;
+$form-check-input-border-radius:          3px;
+$form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>");
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>");
+
+$form-select-padding-y:             .75rem;
+$form-select-padding-x:             .625rem;
+$form-select-font-size:             $input-btn-font-size;
+$form-select-bg:                    $white;
+$form-select-color:                 $input-color;
+$form-select-border-width:          1px;
+$form-select-border-color:          $input-border-color;
+$form-select-border-radius:         0;
+$form-select-focus-box-shadow:      0 0 0 0.188rem #84C8FF;
+
+$form-select-disabled-color:        $gray-200;
+$form-select-disabled-bg:           $gray-400;
+$form-select-disabled-border-color: $gray-400;
+
+// nav tabs
+$nav-pills-border-radius:           0;
+$nav-pills-link-active-color:       $white;
+$nav-pills-link-active-bg:          $primary;
+
+// cards
+$card-spacer-y:                     1.5rem;
+$card-spacer-x:                     1.5rem;
+$card-title-spacer-y:               1rem;
+$card-title-color:                  $primary;
+$card-border-width:                 0;
+$card-border-radius:                0;
+$card-inner-border-radius:          0;
+$card-box-shadow:                   none;
+$card-img-overlay-padding:          1.5rem;
+
+// alert
+$alert-margin-bottom: 0;
+$alert-border-radius: 0;
+$alert-link-font-weight: $font-weight-semibold;
+$alert-border-width: 0;
+$alert-padding-y: .75rem;
+$alert-padding-x: .75rem;
+
+// accordion
+$accordion-padding-y:                     2rem;
+$accordion-padding-x:                     1.5rem;
+$accordion-color:                         $gray-900;
+$accordion-bg:                            transparent;
+$accordion-border-width:                  0;
+$accordion-border-color:                  $gray-500;
+$accordion-border-radius:                 0;
+$accordion-inner-border-radius:           0;
+
+$accordion-body-padding-y:                2rem;
+$accordion-body-padding-x:                1rem;
+
+$accordion-button-padding-y:              $accordion-padding-y;
+$accordion-button-padding-x:              $accordion-padding-x;
+$accordion-button-color:                  $primary;
+$accordion-button-bg:                     transparent;
+$accordion-button-active-bg:              $white;
+$accordion-button-active-color:           $primary;
+
+$accordion-button-icon:         url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath d='M8 1v14M1 8h14' stroke='%23FFFFFF' stroke-width='2'/%3e%3c/svg%3e");
+$accordion-button-active-icon:  url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath d='M1 8h14' stroke='%23FFFFFF' stroke-width='2'/%3e%3c/svg%3e");
+
+// breadcrumbs
+$breadcrumb-font-size:              1rem;
+$breadcrumb-margin-bottom:          2rem;
+$breadcrumb-divider-color:          $gray-500;
+$breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><path d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='#{$breadcrumb-divider-color}'/></svg>");
+$breadcrumb-active-color:           $gray-900;
+
+// modals
+$modal-inner-padding:               0 $spacer;
+$modal-dialog-margin-y-sm-up:       10rem;
+
+$modal-content-color:               $gray-900;
+$modal-content-bg:                  $white;
+$modal-content-border-width:        0;
+$modal-content-border-radius:       0;
+
+$modal-backdrop-bg:                 $black;
+$modal-backdrop-opacity:            .3;
+
+$modal-header-border-width:         0;
+$modal-footer-border-width:         0;
+
+// progress
+$progress-height:                   2px;
+$progress-bg:                       $primary;
+$progress-border-radius:            0;
+$progress-bar-bg:                   $secondary;

@@ -1,0 +1,104 @@
+.main {
+  
+  > p,
+  > .wp-block-heading,
+  > .wp-block-image,
+  > .wp-block-video,
+  > .wp-block-quote,
+  > .wp-block-table,
+  > .custom-block {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 576px) {
+    > p,
+    > .wp-block-heading,
+    > .wp-block-image,
+    > .wp-block-video,
+    > .wp-block-quote,
+    > .wp-block-table,
+    > .custom-block {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    > p,
+    > .wp-block-heading,
+    > .wp-block-image,
+    > .wp-block-video,
+    > .wp-block-quote,
+    > .wp-block-table,
+    > .custom-block {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    > p,
+    > .wp-block-heading,
+    > .wp-block-image,
+    > .wp-block-video,
+    > .wp-block-quote,
+    > .wp-block-table,
+    > .custom-block {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    > p,
+    > .wp-block-heading,
+    > .wp-block-image,
+    > .wp-block-video,
+    > .wp-block-quote,
+    > .wp-block-table,
+    > .custom-block {
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    > p,
+    > .wp-block-heading,
+    > .wp-block-image,
+    > .wp-block-video,
+    > .wp-block-quote,
+    > .wp-block-table,
+    > .custom-block {
+      max-width: 1320px;
+    }
+  }
+
+  .container p,
+  .container-fluid p,
+
+  .container .wp-block-heading,
+  .container-fluid .wp-block-heading,
+
+  .container .wp-block-image,
+  .container-fluid .wp-block-image,
+
+  .container .wp-block-video,
+  .container-fluid .wp-block-video,
+
+  .container .wp-block-quote,
+  .container-fluid .wp-block-quote,
+
+  .container .wp-block-table,
+  .container-fluid .wp-block-table,
+
+  .container .wp-block-group,
+  .container-fluid .wp-block-group,
+  
+  .container .custom-block,
+  .container-fluid .custom-block {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: none;
+  }
+
+}

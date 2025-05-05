@@ -1,0 +1,416 @@
+// header desktop
+// default dark
+.header-desktop {
+    position: relative;
+    width: 100%;
+    padding: 12px 0;
+    background-color: transparent;
+    display: none;
+
+    @media (min-width: 992px) {
+        display: block;
+    }
+
+    &.open {
+        background-color: $primary;
+        height: 100vh;
+
+        .header-desktop-nav {
+            // logos
+            .site-logo {
+                .logo-default {
+                    display: none;
+                }
+        
+                .logo-scrolled {
+                    display: none !important;
+                }
+        
+                .logo-menu {
+                    width: 40px;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                    transition: opacity 0.4s ease 0.3s, transform 0.4s ease 0.3s, visibility 0s linear 0s;
+                }
+            }
+
+            // hamburger
+            .menu-hamburger {
+                .button__bars {
+                    .mobile-button__bar {
+                        background: $white !important;
+                    }
+                }
+
+                span {
+                    color: $white !important;
+                }
+            }
+        }
+
+        // menu
+        .header-desktop-menu {
+            position: relative;
+            z-index: 2;
+
+            height: 100%;
+            margin-top: 50px;
+    
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition: 
+                opacity 0.4s ease-in-out 0.2s,
+                visibility 0s 0.2s,
+                transform 0.4s ease-in-out 0.2s;
+
+            .desktop-submenu {
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+    
+                &.open {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity 0.4s ease-in-out 0.2s, visibility 0s 0.2s !important;
+                }
+            }
+        }
+
+        // images
+        .desktop-submenu-images {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+
+            .desktop-submenu-img {
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+    
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.4s ease-in-out, visibility 0s;
+    
+                @media (min-width: 992px) {
+                    width: 30%;
+                }
+    
+                @media (min-width: 1200px) {
+                    width: 35%;
+                }
+    
+                @media (min-width: 1400px) {
+                    width: 40%;
+                }
+    
+                &.show {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        // bottom menu
+        .bottom-menu {
+            z-index: 3;
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            transition: transform 0.4s ease-in-out 0.2s, opacity 0.4s ease-in-out 0.2s, visibility 0s 0.2s !important;
+        }
+    }
+
+    // nav
+    .header-desktop-nav {
+        position: relative;
+        z-index: 2;
+
+        // logos
+        .site-logo {
+            .logo-default {
+                display: block;
+            }
+    
+            .logo-scrolled {
+                display: none;
+            }
+    
+            .logo-menu {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s linear 0.4s;
+            }
+        }
+
+        // hamburger
+        .menu-hamburger {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            .button__bars {
+                position: relative;
+
+                @media (min-width: 992px) {
+                    width: 2.5vw;
+                    height: 2vw;
+                }
+
+                @media (min-width: 1200px) {
+                    width: 2.2vw;
+                    height: 2vw;
+                }
+
+                @media (min-width: 1400px) {
+                    width: 2vw;
+                    height: 1.5vw;
+                }
+
+                .mobile-button__bar {
+                    position: absolute;
+                    left: 0;
+                    height: 3px;
+                    width: 100%;
+                    background: $white;
+                    transition: 125ms ease all;
+    
+                    &:nth-child(1) {
+                        top: 0;
+                    }
+    
+                    &:nth-child(2) {
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+    
+                    &:nth-child(3) {
+                        top: 100%;
+                        transform: translateY(-100%);
+                    }
+                }
+            }
+
+            span {
+                color: $white;
+                margin-left: 10px;
+            }
+
+            // hamburger menu open
+            &.menu-open {
+                .button__bars {
+                    .mobile-button__bar {
+                        &:nth-child(1) {
+                            width: 100%;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%) rotate(45deg);
+                            height: 2px;
+                        }
+
+                        &:nth-child(2) {
+                            transform: translateY(-50%) rotate(135deg);
+                            height: 2px;
+                        }
+
+                        &:nth-child(3) {
+                            transform: translateY(-100%) translateX(-100%);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // menu
+    .header-desktop-menu {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(25px);
+
+        .nav-item {
+            position: static;
+            transition: .15s ease-in-out;
+        
+            .nav-item-label {
+                position: relative;
+                color: $white;
+                transition: .15s ease-in-out;
+                cursor: pointer;
+        
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $secondary;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+        
+            &.active,
+            &:hover {
+                .nav-item-label {
+                    color: $secondary;
+        
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+        
+    
+        .desktop-submenu {
+            a {
+                display: block;
+                color: $white;
+                text-decoration: none;
+                transition: .15s ease-in-out;
+
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+
+                &:hover {
+                    color: $secondary;
+                    margin-left: 8px;
+                    transition: .15s ease-in-out;
+                }
+            }
+        }
+    }
+
+    // images
+    .desktop-submenu-images {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        transform: translateX(90%);
+
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    // bottom menu
+    .bottom-menu {
+        background-color: $gold;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 24px 0;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+        transition: transform 0.4s ease-in-out 0.2s, opacity 0.4s ease-in-out 0.2s;
+
+        ul {
+            margin-bottom: 0;
+
+            li {
+                &:not(:last-child) {
+                    margin-right: 32px;
+                }
+
+                a {
+                    position: relative;
+                    text-decoration: none;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        bottom: -3px;
+                        width: 0;
+                        height: 1.5px;
+                        background: $navy-dark;
+                        transition: width .3s ease;
+                        transform: translateX(-50%);
+                    }
+
+                    &:hover:after {
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// light
+&.header-light {
+    .header-desktop {
+        // nav
+        .header-desktop-nav {
+            // hamburger
+            .menu-hamburger {
+                .button__bars {
+                    .mobile-button__bar {
+                        background: $primary;
+                    }
+                }
+
+                span {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// on scroll
+&.header-light.scrolled,
+&.scrolled {
+    background-color: $white;
+
+    .header-desktop {
+        // nav
+        .header-desktop-nav {
+            // logos
+            .site-logo {
+                .logo-default {
+                    display: none;
+                }
+        
+                .logo-scrolled {
+                    display: block;
+                }
+            }
+
+            // hamburger
+            .menu-hamburger {
+                .button__bars {
+                    .mobile-button__bar {
+                        background: $primary;
+                    }
+                }
+
+                span {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

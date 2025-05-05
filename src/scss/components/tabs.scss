@@ -1,0 +1,97 @@
+// tabs
+.tabs-block {
+    .nav-pills {
+        column-gap: 2px;
+        margin-bottom: 2rem;
+        padding-left: 0;
+        list-style: none;
+
+        .nav-link {
+            padding: 16px 32px;
+            font-size: 1.25rem;
+            background-color: $gray-200;
+
+            &:hover {
+                background-color: $gray-400;
+                color: $primary;
+            }
+
+            &.active {
+                background-color: $primary;
+                color: $white;
+
+                &:hover {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.aligncenter {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+// tabs sidebar
+.tabs-sidebar {
+    z-index: 1 !important;
+    padding-top: 150px !important;
+    margin-top: -150px !important;
+
+    .nav-pills {
+        flex-direction: column;
+        padding-left: 0;
+        list-style: none;
+
+        .nav-link {
+            background-color: $white;
+            border-color: $white;
+            border-left: 4px solid $white;
+            width: 100%;
+            padding: 16px 16px 16px 8px;
+            font-size: 1.25rem;
+            text-align: left;
+            transition: padding-left 0.3s ease;
+
+            &:hover {
+                background-color: $gray-200;
+                color: $primary;
+                border-left: 4px solid $blue-light;
+                padding-left: 16px;
+            }
+
+            &.active {
+                background-color: $primary;
+                color: $white;
+                border-left: 4px solid $blue-light;
+                padding-left: 16px;
+
+                &:hover {
+                    background-color: $primary;
+                    color: $white;
+                    border-left: 4px solid $blue-light;
+                    padding-left: 16px;
+                }
+            }
+        }
+    }
+}
+
+// tab pane
+.tab-pane {
+    display: block !important;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: visibility 0s, opacity 0.3s ease, height 0.3s ease;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        overflow: visible;
+    }
+}
